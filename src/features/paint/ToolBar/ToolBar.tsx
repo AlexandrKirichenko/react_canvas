@@ -22,22 +22,25 @@ export const ToolBar: FC<ToolBarProps> = ({
       <button className={styles.toolButton} onClick={() => setTool('brush')}>
         brush
       </button>
+      <button className={styles.toolButton} onClick={() => setTool('marker')}>
+        marker
+      </button>
 
       <button className={styles.toolButton} onClick={() => setTool('eraser')}>
         eraser
       </button>
 
-      <button className={styles.toolButton} onClick={() => setTool('circle')}>
-        circle
-      </button>
+      {/*<button className={styles.toolButton} onClick={() => setTool('circle')}>*/}
+      {/*  circle*/}
+      {/*</button>*/}
 
       <button className={styles.toolButton} onClick={() => setTool('line')}>
         line
       </button>
 
-      <button className={styles.toolButton} onClick={() => setTool('rect')}>
-        rect
-      </button>
+      {/*<button className={styles.toolButton} onClick={() => setTool('rect')}>*/}
+      {/*  rect*/}
+      {/*</button>*/}
 
       <span className={styles.toolColor}>
         <label>fill</label>

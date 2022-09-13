@@ -5,4 +5,5 @@ export const TOOLS_WITH_CLASSIC_PROPERTIES: ToolTypeName[] = [
   'circle',
   'line',
   'rect',
+  'marker',
 ];

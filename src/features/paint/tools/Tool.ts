@@ -1,9 +1,10 @@
 export default class Tool {
   canvas: HTMLCanvasElement;
   ctx: CanvasRenderingContext2D;
-
+  canvasPos: any;
   constructor(canvas: HTMLCanvasElement) {
     this.canvas = canvas;
+    this.canvasPos = canvas.getBoundingClientRect();
     const ctx = canvas.getContext('2d');
     if (!ctx) {
       throw Error('ОШИБКА ПОУЧЕНИЯ CTX!');
