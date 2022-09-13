@@ -4,9 +4,51 @@
   background-color: #f5f5f5;
 }
 
+.buttonsBlock {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 10.5em;
+  border-right: 1px solid #d7d7d7;
+  &Tittle {
+    color: #a49c9b;
+    font-size: 14px;
+  }
+}
+
 .toolButton {
-  width: 60px;
-  height: 60px;
+  width: 4em;
+  height: 4em;
+  background-color: #f5f5f5;
+  border: 1px solid #f5f5f5;
+  border-radius: 3px;
+
+  &:hover {
+    background-color: #cee2f7;
+    border: 1px solid #1979ca;
+    cursor: pointer;
+  }
+}
+
+.colorsWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3em;
+  position: relative;
+  border-right: 1px solid #d7d7d7;
+  span {
+    margin-bottom: 15px;
+  }
+}
+
+.colorsTittle {
+  color: #a49c9b;
+  font-size: 14px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform:translate(-50%);
 }
 
 .toolColor {
@@ -15,15 +57,14 @@
   width: 60px;
   height: 60px;
   justify-content: space-between;
-  background-color: white;
   padding: 3px;
-  border: 1px solid #333;
 
   & label {
     display: flex;
     justify-content: center;
     width: 100%;
-
+    color: #a49c9b;
+    font-size: 12px;
   }
 
   & input {
@@ -40,16 +81,14 @@
   width: 60px;
   height: 60px;
   justify-content: space-between;
-  background-color: white;
   padding: 3px;
-  border: 1px solid #333;
-
+  
   & label {
     display: flex;
     justify-content: center;
     width: 100%;
-    font-size: 80%;
-
+    color: #a49c9b;
+    font-size: 12px;
   }
 
   & input {

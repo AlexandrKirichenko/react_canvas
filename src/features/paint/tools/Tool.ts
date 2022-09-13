@@ -7,13 +7,12 @@ export default class Tool {
     this.canvasPos = canvas.getBoundingClientRect();
     const ctx = canvas.getContext('2d');
     if (!ctx) {
-      throw Error('ОШИБКА ПОУЧЕНИЯ CTX!');
+      throw Error('Error to get context!');
     }
 
     this.ctx = ctx;
     this.destroyEvents();
   }
-
   set fillColor(color: CanvasRenderingContext2D['fillStyle']) {
     this.ctx.fillStyle = color;
   }
@@ -23,6 +22,10 @@ export default class Tool {
 
   set lineWidth(width: number) {
     this.ctx.lineWidth = width;
+  }
+
+  clearCnv(): void {
+    this.ctx.clearRect(0, 0, 800, 600);
   }
 
   destroyEvents(): void {

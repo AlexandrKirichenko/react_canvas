@@ -49,6 +49,12 @@ export const PaintMain: FC = () => {
     setTool(tool);
   };
 
+  const canvasClear = () => {
+    if (tool) {
+      tool.clearCnv();
+    }
+  };
+
   const handleSetTool = (toolType: ToolTypeName) => {
     if (!canvasRef.current) {
       return;
@@ -65,6 +71,7 @@ export const PaintMain: FC = () => {
           setStrokeStyle={setStrokeStyle}
           lineWidth={lineWidth}
           setLineWidth={setLineWidth}
+          canvasClear={canvasClear}
         />
       </div>
       <div>

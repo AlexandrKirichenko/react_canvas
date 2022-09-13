@@ -7,6 +7,7 @@ export default class Marker extends Tool {
   constructor(canvas: HTMLCanvasElement) {
     super(canvas);
     this.listen();
+    this.ctx.globalAlpha = 0.7;
   }
 
   listen(): void {
@@ -51,8 +52,7 @@ export default class Marker extends Tool {
       if (this.paths[i]?.length < 1) {
         continue;
       }
-
-      this.ctx.strokeStyle = 'rgba(65,65,65,0.25)';
+      this.ctx.globalAlpha = 0.7;
       this.ctx.lineWidth = 15;
       this.ctx.beginPath();
 
