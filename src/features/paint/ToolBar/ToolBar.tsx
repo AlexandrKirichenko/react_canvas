@@ -45,7 +45,18 @@ export const ToolBar: FC<ToolBarProps> = ({
         </button>
 
         <button className={styles.toolButton} onClick={() => setTool('rect')}>
-          <BiRectangle size="2em" color="#69a5e1" />
+          <svg viewBox="0 0 4 2.5">
+            <rect
+              width="4"
+              height="2.5"
+              style={{
+                fill: 'transparent',
+                strokeWidth: '0.15',
+                strokeDasharray: '0.3',
+                stroke: '#262a2e',
+              }}
+            />
+          </svg>
         </button>
 
         <button className={styles.toolButton} onClick={() => canvasClear()}>

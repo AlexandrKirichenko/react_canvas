@@ -26,11 +26,13 @@ export default class Tool {
 
   clearCnv(): void {
     this.ctx.clearRect(0, 0, 800, 600);
+    // this.canvas.width = 800;
   }
 
   destroyEvents(): void {
     this.canvas.onmousemove = null;
     this.canvas.onmousedown = null;
     this.canvas.onmouseup = null;
+    this.canvas.onkeydown = null;
   }
 }

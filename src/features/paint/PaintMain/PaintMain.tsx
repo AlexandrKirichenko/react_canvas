@@ -6,6 +6,8 @@ import styles from './PaintMain.module.scss';
 
 export const PaintMain: FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const ctxRef = useRef(null);
+
   const [tool, setTool] = useState<ToolInstanceType | null>(null);
 
   const [fillStyle, setFillStyle] =
@@ -34,8 +36,9 @@ export const PaintMain: FC = () => {
     if (!canvasRef.current) {
       return;
     }
-    const tool = new TOOL_TYPE[toolType](canvasRef.current);
 
+    const tool = new TOOL_TYPE[toolType](canvasRef.current);
+    tool.ctx.globalAlpha = 1;
     if (TOOLS_WITH_CLASSIC_PROPERTIES.includes(toolType)) {
       tool.strokeColor = strokeStyle;
       tool.fillColor = fillStyle;

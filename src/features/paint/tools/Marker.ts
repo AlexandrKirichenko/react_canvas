@@ -25,7 +25,6 @@ export default class Marker extends Tool {
 
     if (this.paths) {
       this.paths.push([pos]);
-      console.log([pos]);
     }
   }
   mouseMoveHandler(e: MouseEvent): void {
